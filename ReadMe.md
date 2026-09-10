@@ -1,0 +1,1 @@
+Going to start with a new website because I want to do even more, I'd really like to show what I've got. I'm looking into using framworks such as svelte, Next and React, but nothing is concrete right now
