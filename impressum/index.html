@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="Images/IMG_8825.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum - I look Better in the Dark</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap"
+    rel="stylesheet">
+  <style>
+    .legal-hero {
+      padding: 140px 40px 80px;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .legal-content {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .legal-section {
+      margin-bottom: 54px;
+    }
+
+    .legal-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: .02em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .legal-section p {
+      color: var(--gm);
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    .legal-section ul {
+      color: var(--gm);
+      margin-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .legal-section li {
+      margin-bottom: 8px;
+      line-height: 1.8;
+    }
+
+    .legal-section a {
+      color: var(--acc);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+
+    .legal-section a:hover {
+      border-bottom-color: var(--acc);
+    }
+
+    .legal-intro {
+      color: var(--gl);
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 720px;
+      margin-top: 18px;
+    }
+
+    .legal-note {
+      background: var(--off);
+      border: 1px solid var(--gray);
+      padding: 28px;
+      margin-bottom: 36px;
+    }
+
+    .legal-note p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .legal-hero {
+        padding: 100px 24px 60px;
+      }
+
+      .legal-content {
+        padding: 40px 24px;
+      }
+
+      .legal-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .legal-hero {
+        padding: 80px 16px 50px;
+      }
+
+      .legal-content {
+        padding: 32px 16px;
+      }
+
+      .legal-section h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="site-nav">
+    <div class="site-logo" onclick="location.href='index.html'">BETTERINTHEDARK(Impressum)</div>
+    <button class="nav-toggle" type="button" onclick="toggleNav()">Menu</button>
+    <ul class="site-nav-links">
+      <li><a href="../">Startseite</a></li>
+      <li><a href="/datenschutz/">Datenschutz</a></li>
+      <li><a href="/impressum/" class="active">Impressum</a></li>
+    </ul>
+  </nav>
+
+  <div class="legal-hero">
+    <div class="legal-content" style="border-bottom: none; padding: 0;">
+      <span class="section-label">Rechtliches</span>
+      <h1 class="display-title">Impressum</h1>
+      <p class="legal-intro">Angaben gemäss den in der Schweiz üblichen Impressumsangaben für diese persönliche Website.</p>
+    </div>
+  </div>
+
+  <div class="legal-content">
+    <div class="legal-note">
+      <p>Diese Seite bündelt die Kontakt- und Verantwortlichkeitsangaben für <strong>betterinthedark.ch</strong>. Wenn für eine konkrete rechtliche Anfrage eine vollständige Postadresse benötigt wird, nutze bitte die angegebene E-Mail-Adresse.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>1. Verantwortlich für den Inhalt</h2>
+      <p>
+        Romeo Arisona<br>
+        Schweiz<br>
+        E-Mail: <a href="mailto:kodama@betterinthedark.ch">kodama@betterinthedark.ch</a>
+      </p>
+      <p>Verantwortlich für die Inhalte dieser Website ist die oben genannte Person.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Kontakt</h2>
+      <p>Allgemeine Anfragen bitte per E-Mail an <a href="mailto:kodama@betterinthedark.ch">kodama@betterinthedark.ch</a>.</p>
+      <p>Web: <a href="https://betterinthedark.ch" target="_blank">betterinthedark.ch</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Inhalt und Urheberrecht</h2>
+      <p>Texte, Fotos, Layout und sonstige Inhalte auf dieser Website stammen, soweit nicht anders vermerkt, von Romeo Arisona.</p>
+      <p>Eine Verwendung, Vervielfältigung oder Weitergabe von Inhalten dieser Website ist nur mit Zustimmung des Rechteinhabers erlaubt, sofern das Gesetz nichts anderes vorsieht.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Externe Links</h2>
+      <p>Für Inhalte externer Websites, auf die von hier aus verlinkt wird, sind ausschliesslich deren Betreiber verantwortlich. Beim Verlassen dieser Website gelten die jeweiligen Datenschutz- und Nutzungsbestimmungen der Zielseite.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Datenschutz</h2>
+      <p>Informationen zur Verarbeitung personenbezogener Daten findest du in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-copy">2026 Romeo Arisona - Better in the Dark</span>
+    <div class="footer-links">
+      <a href="../">Startseite</a>
+      <a href="../datenschutz/">Datenschutz</a>
+      <a href="/impressum/" class="active">Impressum</a>
+    </div>
+  </footer>
+<script src="../script.js"></script>
+</body>
+</html>

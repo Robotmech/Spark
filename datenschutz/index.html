@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="../Images/IMG_8825.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz - I look Better in the Dark</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap"
+    rel="stylesheet">
+  <style>
+    /* PRIVACY POLICY SPECIFIC */
+    .privacy-hero {
+      padding: 140px 40px 80px;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .privacy-content {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .privacy-section {
+      margin-bottom: 60px;
+    }
+
+    .privacy-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: .02em;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .privacy-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: .05em;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: var(--gl);
+    }
+
+    .privacy-section p {
+      color: var(--gm);
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    .privacy-section ul,
+    .privacy-section ol {
+      color: var(--gm);
+      margin-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .privacy-section li {
+      margin-bottom: 8px;
+      line-height: 1.8;
+    }
+
+    .privacy-section a {
+      color: var(--acc);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+
+    .privacy-section a:hover {
+      border-bottom-color: var(--acc);
+    }
+
+    .privacy-intro {
+      color: var(--gl);
+      font-size: 14px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .privacy-updated {
+      font-size: 11px;
+      color: var(--gm);
+      letter-spacing: .1em;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .table-of-contents {
+      background: var(--off);
+      border: 1px solid var(--gray);
+      padding: 32px 28px;
+      margin-bottom: 60px;
+      border-radius: 2px;
+    }
+
+    .table-of-contents h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .table-of-contents ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 10px;
+    }
+
+    .table-of-contents a {
+      color: var(--acc);
+      font-size: 12px;
+      transition: color .2s;
+    }
+
+    .table-of-contents a:hover {
+      color: var(--white);
+    }
+
+    .inline-highlight {
+      background: var(--adim);
+      padding: 2px 6px;
+      border-radius: 1px;
+    }
+
+    @media (max-width: 900px) {
+      .privacy-hero {
+        padding: 100px 24px 60px;
+      }
+
+      .privacy-content {
+        padding: 40px 24px;
+      }
+
+      .privacy-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .privacy-hero {
+        padding: 80px 16px 50px;
+      }
+
+      .privacy-content {
+        padding: 32px 16px;
+      }
+
+      .privacy-section h2 {
+        font-size: 24px;
+      }
+
+      .table-of-contents {
+        padding: 20px 16px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="site-logo" onclick="location.href='index.html'">BETTERINTHEDARK(DSG)</div>
+    <button class="nav-toggle" type="button" onclick="toggleNav()">Menu</button>
+    <ul class="site-nav-links">
+      <li><a href="../">Startseite</a></li>
+      <li><a href="index.html#biography">Über</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+      <li><a href="../datenschutz/" style="color: var(--acc);">Datenschutz</a></li>
+    </ul>
+  </nav>
+
+  <div class="privacy-hero">
+    <div class="privacy-content" style="border-bottom: none; padding: 0;">
+      <span class="section-label">Rechtliches</span>
+      <h1 class="display-title">Datenschutz</h1>
+      <p class="privacy-intro">Diese Datenschutzerklärung erklärt, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen.</p>
+    </div>
+  </div>
+
+  <div class="privacy-content">
+    <div class="privacy-updated">Zuletzt aktualisiert: Mai 2026</div>
+
+    <div class="table-of-contents">
+      <h3>Inhaltsverzeichnis</h3>
+      <ul>
+        <li><a href="#section-1">1. Verantwortlicher</a></li>
+        <li><a href="#section-2">2. Erfassung und Verwendung von Daten</a></li>
+        <li><a href="#section-3">3. Rechtsgrundlagen</a></li>
+        <li><a href="#section-4">4. Cookies und Tracking</a></li>
+        <li><a href="#section-5">5. Datenscutz Dritter</a></li>
+        <li><a href="#section-6">6. Ihre Rechte</a></li>
+        <li><a href="#section-7">7. Datensicherheit</a></li>
+        <li><a href="#section-8">8. Speicherdauer</a></li>
+        <li><a href="#section-9">9. Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="section-1">
+      <h2>1. Verantwortlicher</h2>
+      <p>Für diese Website und die Verarbeitung Ihrer personenbezogenen Daten ist verantwortlich:</p>
+      <p>
+        Romeo Arisona<br>
+        Schweiz<br>
+      </p>
+      <p>Bei Fragen zum Datenschutz kontaktieren Sie uns bitte über die <a href="index.html#kontakt">Kontaktseite</a>.</p>
+    </div>
+
+    <div class="privacy-section" id="section-2">
+      <h2>2. Erfassung und Verwendung von Daten</h2>
+      
+      <h3>2.1 Automatisch erfasste Daten</h3>
+      <p>Wenn Sie unsere Website besuchen, erfassen wir automatisch bestimmte Informationen:</p>
+      <ul>
+        <li><span class="inline-highlight">IP-Adresse</span> - zur Bereitstellung der Website und Analyse des Datenverkehrs</li>
+        <li><span class="inline-highlight">Browser-Typ und -Version</span> - zur Optimierung der Website-Kompatibilität</li>
+        <li><span class="inline-highlight">Betriebssystem</span> - zur Verbesserung der Benutzerfreundlichkeit</li>
+        <li><span class="inline-highlight">Besuchte Seiten und Verweilzeiten</span> - zur Analyse der Website-Nutzung</li>
+        <li><span class="inline-highlight">Referrer-Informationen</span> - um zu verstehen, woher Sie kommen</li>
+      </ul>
+
+      <h3>2.2 Von Ihnen bereitgestellte Daten</h3>
+      <p>Wenn Sie uns über das Kontaktformular oder E-Mail kontaktieren, erfassen wir:</p>
+      <ul>
+        <li>Ihren Namen</li>
+        <li>Ihre E-Mail-Adresse</li>
+        <li>Ihre Nachricht oder Anfrage</li>
+        <li>Weitere Informationen, die Sie freiwillig bereitstellen</li>
+      </ul>
+      <p>Diese Daten werden ausschliesslich zur Beantwortung Ihrer Anfrage verwendet.</p>
+
+      <h3>2.3 Verwendungszwecke</h3>
+      <p>Ihre Daten werden verwendet für:</p>
+      <ul>
+        <li>Bereitstellung und Verbesserung unserer Website</li>
+        <li>Beantwortung von Anfragen und Korrespondenz</li>
+        <li>Analyse von Website-Traffic und Nutzungsverhalten</li>
+        <li>Einhaltung von Rechtsvorschriften und Verträgen</li>
+        <li>Sicherheit und Schutz vor Missbrauch</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="section-3">
+      <h2>3. Rechtsgrundlagen</h2>
+      <p>Die Verarbeitung Ihrer personenbezogenen Daten erfolgt gemäss:</p>
+      <ul>
+        <li><strong>Schweizer Datenschutzgesetz (DSG)</strong> - für Datenverarbeitung in der Schweiz</li>
+        <li><strong>Datenschutz-Grundverordnung (DSGVO)</strong> - falls Sie sich in der EU befinden</li>
+        <li><strong>Artikel 6 DSGVO</strong> - für berechtigte Interessen und Vertragserfordernisse</li>
+        <li><strong>Artikel 7 DSGVO</strong> - mit Ihrer ausdrücklichen Zustimmung, falls erforderlich</li>
+      </ul>
+      <p>Wir verarbeiten Daten nur auf Basis einer zulässigen Rechtsgrundlage und nicht ohne Ihre Zustimmung, wenn diese erforderlich ist.</p>
+    </div>
+
+    <div class="privacy-section" id="section-4">
+      <h2>4. Cookies und Tracking</h2>
+      
+      <h3>4.1 Technisch notwendige Cookies</h3>
+      <p>Diese Website nutzt <span class="inline-highlight">keine Cookies</span> für Tracking oder Werbung. Wir respektieren Ihre Privatsphäre vollständig.</p>
+
+      <h3>4.2 Tracking und Analytik</h3>
+      <p>Diese Website verwendet kein Google Analytics, kein Facebook Pixel oder ähnliche Tracking-Dienste. Wir sammeln keine detaillierten Nutzungsdaten für Werbezwecke.</p>
+
+      <h3>4.3 Server-Logs</h3>
+      <p>Unser Hosting-Provider <strong>Infomaniak</strong> (Schweiz) speichert standardmässig Server-Logs, die begrenzte Informationen enthalten wie IP-Adresse, Zugriffsuhrzeit und angeforderte Ressourcen. Diese werden automatisch gelöscht und nicht für Marketingzwecke verwendet.</p>
+    </div>
+
+    <div class="privacy-section" id="section-5">
+      <h2>5. Datenschutz Dritter</h2>
+      
+      <h3>5.1 Hosting und Infrastruktur</h3>
+      <p>Diese Website wird von <a href="https://www.infomaniak.com" target="_blank">Infomaniak</a> gehostet, einem Schweizer Hosting-Anbieter mit Sitz in Genf. Infomaniak unterliegt dem Schweizer Datenschutzgesetz und bietet hohe Datenschutzstandards.</p>
+
+      <h3>5.2 Externe Ressourcen</h3>
+      <p>Diese Website verwendet Google Fonts für die Typografie. Google Fonts werden vom Google CDN bereitgestellt, was minimale Datenübertragungen beinhaltet. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank">Google-Datenschutzerklärung</a>.</p>
+
+      <h3>5.3 Externe Links</h3>
+      <p>Diese Website enthält möglicherweise Links zu externen Websites. Wir sind nicht verantwortlich für deren Datenschutzpraktiken. Bitte überprüfen Sie deren Datenschutzerklärungen.</p>
+
+      <h3>5.4 Keine Datenweitergabe</h3>
+      <p>Wir geben Ihre personenbezogenen Daten nicht an Dritte für Marketingzwecke, Verkauf oder sonstige kommerzielle Zwecke weiter, sofern nicht:</p>
+      <ul>
+        <li>Sie ausdrücklich zugestimmt haben</li>
+        <li>Die Weitergabe von einem Rechtsanspruch verlangt wird</li>
+        <li>Es notwendig ist, um einen Service bereitzustellen (z.B. E-Mail-Versand)</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="section-6">
+      <h2>6. Ihre Rechte</h2>
+      <p>Nach dem Schweizer DSG und der DSGVO haben Sie folgende Rechte:</p>
+      
+      <h3>6.1 Auskunftsrecht</h3>
+      <p>Sie haben das Recht zu erfahren, welche personenbezogenen Daten wir über Sie speichern und wie wir diese verwenden.</p>
+
+      <h3>6.2 Berichtigungsrecht</h3>
+      <p>Sie können die Korrektur ungenauer oder unvollständiger Daten anfordern.</p>
+
+      <h3>6.3 Löschungsrecht</h3>
+      <p>Sie können die Löschung Ihrer Daten unter bestimmten Bedingungen anfordern (Recht auf Vergessenwerden).</p>
+
+      <h3>6.4 Recht auf Einschränkung</h3>
+      <p>Sie können verlangen, dass wir die Verarbeitung Ihrer Daten einschränken.</p>
+
+      <h3>6.5 Datenportabilität</h3>
+      <p>Sie haben das Recht, Ihre Daten in einem strukturierten Format zu erhalten und diese an einen anderen Dienstanbieter zu übertragen.</p>
+
+      <h3>6.6 Widerspruchsrecht</h3>
+      <p>Sie können der Verarbeitung Ihrer Daten zu Marketingzwecken widersprechen.</p>
+
+      <h3>6.7 Kontaktaufnahme</h3>
+      <p>Um Ihre Rechte geltend zu machen, kontaktieren Sie uns bitte via <a href="index.html#kontakt">Kontaktformular</a> oder per E-Mail. Wir werden Ihre Anfrage innerhalb von 30 Tagen bearbeiten.</p>
+    </div>
+
+    <div class="privacy-section" id="section-7">
+      <h2>7. Datensicherheit</h2>
+      <p>Wir setzen angemessene technische und organisatorische Massnahmen ein, um Ihre Daten zu schützen:</p>
+      <ul>
+        <li><span class="inline-highlight">SSL/TLS-Verschlüsselung</span> - für sichere Datenübertragung</li>
+        <li><span class="inline-highlight">Sichere Server</span> - gehostet bei Infomaniak mit Schweizer Datenschutzstandards</li>
+        <li><span class="inline-highlight">Zugriffskontrolle</span> - begrenzte Zugriffe auf persönliche Daten</li>
+        <li><span class="inline-highlight">Regelmässige Updates</span> - um Sicherheitslücken zu schliessen</li>
+      </ul>
+      <p>Trotz aller Sicherheitsmassnahmen können wir keine hundertprozentige Sicherheit garantieren. Sie verwenden diese Website auf Ihre eigene Verantwortung.</p>
+    </div>
+
+    <div class="privacy-section" id="section-8">
+      <h2>8. Speicherdauer</h2>
+      <p>Ihre Daten werden so lange gespeichert, wie sie für die jeweilige Verarbeitung notwendig sind:</p>
+      <ul>
+        <li><strong>Kontaktanfragen:</strong> Werden nach Beantwortung der Anfrage gelöscht (normalerweise innerhalb von 30 Tagen)</li>
+        <li><strong>Server-Logs:</strong> Werden von Infomaniak nach einem festgelegten Zeitraum automatisch gelöscht</li>
+        <li><strong>Analytische Daten:</strong> Werden nicht langfristig gespeichert</li>
+      </ul>
+      <p>Wenn Sie die Löschung Ihrer Daten anfordern, werden diese gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+    </div>
+
+    <div class="privacy-section" id="section-9">
+      <h2>9. Kontakt und Beschwerden</h2>
+      
+      <h3>9.1 Datenschutz-Anfragen</h3>
+      <p>Für Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte über die <a href="index.html#kontakt">Kontaktseite</a>.</p>
+
+      <h3>9.2 Beschwerde einreichen</h3>
+      <p>Wenn Sie der Meinung sind, dass wir Ihre Datenschutzrechte verletzt haben, können Sie eine Beschwerde bei der zuständigen Schweizer Datenschutzbehörde einreichen:</p>
+      <p>
+        <strong>Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)</strong><br>
+        Fédérale Commission de la Protection des Données (FCPD)<br>
+        Rue de Trèves, 61<br>
+        1200 Genève<br>
+        Schweiz<br>
+        <a href="https://www.edoeb.admin.ch" target="_blank">www.edoeb.admin.ch</a>
+      </p>
+
+      <h3>9.3 Änderungen dieser Erklärung</h3>
+      <p>Wir behhalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Die aktuelle Version ist immer auf dieser Seite verfügbar. Wesentliche Änderungen werden mitgeteilt.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-copy">© 2026 Romeo Arisona</div>
+    <div class="footer-links">
+      <a href="../">Startseite</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="../impressum">Impressum</a>
+      <a href="https://infomaniak.ch" target="_blank">Gehostet bei Infomaniak</a>
+    </div>
+  </footer>
+<script src="../script.js"></script>
+</body>
+
+</html>
