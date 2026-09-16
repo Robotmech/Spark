@@ -505,8 +505,7 @@ function Home({ navigate }) {
             updating outdated stuff. //Actually doing nothing
             <br />
             <br />
-            The rest of the time: out with friends, shooting film, taking late
-            trains, and listening to music that makes more sense at night.
+            The rest of the time: out with friends, being stressed, commuting on trains, and listening to music.
           </p>
           <ArrowLink onClick={() => navigate("bio")}>More about me</ArrowLink>
         </div>
@@ -516,9 +515,7 @@ function Home({ navigate }) {
           <div>
             <Eyebrow>Gallery / Selected Frames</Eyebrow>
             <h2>
-              Out of focus,
-              <br />
-              <i>on purpose.</i>
+              Don't know what I'm doing
             </h2>
           </div>
           <ArrowLink onClick={() => navigate("gallery")}>
