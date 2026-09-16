@@ -16,10 +16,7 @@ const consoleMessages = [
   ":: searching for a signal... found one",
   "[ NOTE ] the night train is running late",
   "<> hello, fellow source viewer",
-  "[ 404 ] motivation not found",
   "// made with spite and free time",
-  "<3 radiohead is still in the queue",
-  "[ SYS ] everything is probably fine :-)",
 ];
 const photos = [
   ["Images/R0001705.JPEG", "Bahnhof Luzern", "Concourse / 2026"],
@@ -304,7 +301,7 @@ function App() {
             "aria-label": "Toggle color mode",
             title: "Toggle color mode",
           },
-          dark ? "\u263C" : "\u25D0",
+          dark ? "\u25D0" : "\u25D0",
         ),
         /* @__PURE__ */ React.createElement(
           "button",

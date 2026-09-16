@@ -18,7 +18,6 @@ const consoleMessages = [
   "[ OK ] betterinthedark() is awake",
   ":: searching for a signal... found one",
   "<> hello, fellow source viewer",
-  "[ 404 ] motivation not found",
   "// made with spite and free time",
   "everything is probably fine :-)",
 ];
@@ -304,7 +303,7 @@ function App() {
             aria-label="Toggle color mode"
             title="Toggle color mode"
           >
-            {dark ? "☼" : "◐"}
+            {dark ? "◐" : "◐"}
           </button>
           <button
             className="menu-button"
