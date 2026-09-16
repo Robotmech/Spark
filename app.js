@@ -25,7 +25,7 @@ const photos = [
   ["Images/R0001705.JPEG", "Bahnhof Luzern", "Concourse / 2026"],
   ["Images/R0001728.JPEG", "Die Zentralbahn", "Night service / 2026"],
   ["Images/R0001706.JPEG", "130 008-6", "Platform / 2026"],
-  ["Images/R0001798.JPEG", "K\xE4the", "Portrait / 2026"],
+  ["Images/R0001798.JPEG", "Käthe", "Portrait / 2026"],
   ["Images/DSCF9739.JPEG", "Swan", "Quiet afternoon / 2025"],
   ["Images/Pfp.JPEG", "Self portrait", "Unfiled / 2026"]
 ];
@@ -307,15 +307,12 @@ function RainbowBackground() {
   }, []);
   return /* @__PURE__ */ React.createElement("div", { className: "rainbows-bg", "aria-hidden": "true" }, Array.from({ length: 20 }, (_, index) => {
     const pattern = rainbowPatterns[(frame + index) % rainbowPatterns.length];
-    const color = rainbowColors[(frame + index * 2) % rainbowColors.length];
+    const color = rainbowColors[index * 2 % rainbowColors.length];
     return /* @__PURE__ */ React.createElement(
       "div",
       {
         className: "rainbow-line",
-        style: {
-          color,
-          transform: `translateX(${(frame + index * 13) % 9 - 4}%)`
-        },
+        style: { color },
         key: index
       },
       pattern.repeat(7)

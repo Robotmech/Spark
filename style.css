@@ -1,17 +1,21 @@
 :root {
-  --black: #090a0b;
-  --off: #111315;
-  --panel: #17191b;
-  --white: #eeeae2;
-  --line: #303437;
-  --muted: #85898a;
-  --red: #b7353d;
-  --accent: #dbc116;
+  --black: #080808;
+  --off: #0f0f0f;
+  --panel: #0f0f0f;
+  --white: #f0ece4;
+  --line: #2a2a2a;
+  --muted: #777777;
+  --red: #9e2b2b;
+  --accent: #e93b3b;
   --mono: "DM Mono", monospace;
-  --display: "Bebas Neue", Impact, sans-serif;
+  --display: "Teko", sans-serif;
 }
 * {
   box-sizing: border-box;
+}
+::selection {
+  background: var(--accent);
+  color: var(--black);
 }
 html {
   scroll-behavior: smooth;
@@ -38,22 +42,94 @@ body:before {
 }
 .app {
   min-height: 100vh;
-  background: linear-gradient(115deg, var(--black), var(--off) 55%, #0d0f10);
+  position: relative;
+  isolation: isolate;
+  background: var(--black);
   color: var(--white);
   transition:
     background 0.4s,
     color 0.4s;
 }
+.app > main,
+.app > footer {
+  position: relative;
+  z-index: 1;
+}
+.app > main {
+  position: relative;
+  isolation: isolate;
+}
+.app > main > * {
+  position: relative;
+  z-index: 1;
+}
+.app > main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("Images/Cloud1.png"),
+    url("Images/Cloud2.png"),
+    url("Images/cloud3.png"),
+    url("Images/cloud1.png"),
+    url("Images/cloud2.png"),
+    url("Images/cloud3.png");
+  background-position:
+    4vw 9vh,
+    calc(100% - 2vw) 58vh,
+    11vw 118vh,
+    calc(100% - 8vw) 176vh,
+    3vw 238vh,
+    calc(100% - 1vw) 295vh;
+  background-size:
+    min(34vw, 470px) auto,
+    min(31vw, 430px) auto,
+    min(37vw, 510px) auto,
+    min(35vw, 480px) auto,
+    min(33vw, 450px) auto,
+    min(30vw, 410px) auto;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  opacity: 0.22;
+}
+.app::before,
+.app::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+.app::before {
+  background-image: url("Images/bird-on-black.jpg");
+  background-position: 6vw 12vh;
+  background-size: min(24vw, 280px) auto;
+  mix-blend-mode: screen;
+  opacity: 0.42;
+}
+.app::after {
+  background-image: url("Images/flight-path-on-gray-c.jpg");
+  background-position: calc(100% - 5vw) 48vh;
+  background-size: min(27vw, 320px) auto;
+  mix-blend-mode: multiply;
+  opacity: 0.26;
+}
 .app.dark {
-  --black: #f0ede5;
-  --off: #e5e1d8;
-  --panel: #d8d3c8;
-  --white: #101214;
-  --line: #8d918e;
-  --muted: #4d5351;
-  --red: #81282e;
-  --green: #2f6e26;
-  --accent: #8c7200;
+  --black: #8ab4c8;
+  --off: #a9ced9;
+  --panel: #b9d7dc;
+  --white: #15251e;
+  --line: #496b58;
+  --muted: #304c41;
+  --red: #2b8425;
+  --accent: #2d5730;
+  background: linear-gradient(160deg, #82aec2 0%, #a8ced8 100%);
+}
+.app.dark > main::before {
+  opacity: 0.58;
 }
 .topbar {
   height: 76px;
@@ -64,11 +140,11 @@ body:before {
   border-bottom: 1px dashed var(--line);
   position: relative;
   z-index: 30;
-  background: rgba(9, 10, 11, 0.86);
+  background: rgba(8, 8, 8, 0.86);
   backdrop-filter: blur(10px);
 }
 .app.dark .topbar {
-  background: rgba(238, 234, 226, 0.86);
+  background: rgba(126, 169, 188, 0.9);
 }
 .wordmark,
 .main-nav button,
@@ -134,12 +210,13 @@ body:before {
 .home-hero {
   min-height: calc(100vh - 76px);
   display: grid;
-  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
-  gap: 7vw;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(460px, 1.28fr);
+  gap: 5vw;
   align-items: center;
   position: relative;
-  padding-top: 7vh;
-  padding-bottom: 7vh;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 .eyebrow {
   font-size: 10px;
@@ -195,11 +272,15 @@ body:before {
   position: relative;
   border: 1px solid var(--line);
   padding: 7px;
-  background: #050606;
+  background: var(--black);
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
 }
 .hero-image img {
   width: 100%;
-  height: min(69vh, 650px);
+  height: 100%;
+  min-height: 0;
   object-fit: cover;
   display: block;
   filter: grayscale(0.35) contrast(1.12);
@@ -215,14 +296,26 @@ body:before {
 }
 .hero-stamp {
   position: absolute;
-  right: 2vw;
-  bottom: 11vh;
+  right: 3vw;
+  bottom: 5vh;
   background: var(--red);
   color: var(--black);
-  width: 105px;
-  height: 105px;
+  width: 122px;
+  height: 122px;
   display: grid;
   place-content: center;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 56%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 56%,
+    2% 35%,
+    39% 35%
+  );
   text-align: center;
   font-size: 12px;
   line-height: 1.05;
@@ -238,11 +331,15 @@ body:before {
   border-top: 1px dashed var(--line);
   border-bottom: 1px dashed var(--line);
   background: var(--red);
-  color: var(--black);
+  color: var(--white);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.15em;
   white-space: nowrap;
   padding: 13px 0;
+}
+.app.dark .marquee {
+  color: #f1edc8;
 }
 .marquee-track {
   display: flex;
@@ -259,7 +356,7 @@ body:before {
   align-items: center;
 }
 .marquee-separator {
-  color: var(--white);
+  color: var(--black);
   font-size: 14px;
   padding: 0 20px;
   font-weight: 400;
@@ -368,9 +465,15 @@ footer {
   line-height: 1.18;
   letter-spacing: 0.08em;
   white-space: nowrap;
-  transition:
-    transform 0.16s steps(2, end),
-    color 0.16s steps(2, end);
+  animation: rainbow-flicker 0.3s infinite alternate;
+}
+@keyframes rainbow-flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.85;
+  }
 }
 .loading-screen {
   position: fixed;
@@ -379,7 +482,7 @@ footer {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #090a0b;
+  background: #080808;
   animation: loading-out 0.45s 0.9s ease forwards;
 }
 .loading-screen .rainbows-bg {

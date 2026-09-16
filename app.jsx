@@ -347,14 +347,11 @@ function RainbowBackground() {
       {Array.from({ length: 20 }, (_, index) => {
         const pattern =
           rainbowPatterns[(frame + index) % rainbowPatterns.length];
-        const color = rainbowColors[(frame + index * 2) % rainbowColors.length];
+        const color = rainbowColors[(index * 2) % rainbowColors.length];
         return (
           <div
             className="rainbow-line"
-            style={{
-              color,
-              transform: `translateX(${((frame + index * 13) % 9) - 4}%)`,
-            }}
+            style={{ color }}
             key={index}
           >
             {pattern.repeat(7)}
