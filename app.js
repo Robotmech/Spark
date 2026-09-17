@@ -239,11 +239,11 @@ function Home({
     className: "home-hero page-pad"
   }, /*#__PURE__*/React.createElement("div", {
     className: "hero-copy"
-  }, /*#__PURE__*/React.createElement(Eyebrow, null, "Information technologist / photographer"), /*#__PURE__*/React.createElement("h1", null, "Romeo", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("i", null, "Ari", /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement(Eyebrow, null, "Information technologist / Pathfinder"), /*#__PURE__*/React.createElement("h1", null, "Romeo", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("i", null, "Ari", /*#__PURE__*/React.createElement("a", {
     href: "Images/Romeo AriSONa.png"
   }, "son"), "a.")), /*#__PURE__*/React.createElement("p", {
     className: "hero-intro"
-  }, "Based between Zürich and Stans, Switzerland. Information Technologist, Photographer, and Music Enjoyer."), /*#__PURE__*/React.createElement("div", {
+  }, "Based between Zürich and Stans, Switzerland. Information Technologist and Music Enjoyer."), /*#__PURE__*/React.createElement("div", {
     className: "hero-links"
   }, /*#__PURE__*/React.createElement(ArrowLink, {
     onClick: () => navigate("gallery")
@@ -312,9 +312,9 @@ function Bio() {
     className: "reading-column"
   }, /*#__PURE__*/React.createElement("p", {
     className: "lead"
-  }, "I am an Information Technologist and photographer based between Zürich and Stans, Switzerland."), /*#__PURE__*/React.createElement("p", null, "At Pilatus Aircraft, I work with the IED team on the infrastructure and applications that keep a very large machine moving. Outside of work, I document the world in digital and analogue frames."), /*#__PURE__*/React.createElement("p", null, "My interests tend to orbit around systems, identity, music, and the particular atmosphere of places after dark."), /*#__PURE__*/React.createElement("div", {
+  }, "I am an Information Technologist and Freelancer based between Zürich and Stans, Switzerland."), /*#__PURE__*/React.createElement("p", null, "Apprentice Information Technologist at Pilatus Aircraft as part of the IED team. Building and maintaining IT infrastructure at one of Switzerland's premier aerospace manufacturers. //Actually doing nothing", /*#__PURE__*/React.createElement("br", null), "Outside of work I'm quite crafty with my hands, often engaging in DIY projects and photography. I also enjoy exploring new technologies and experimenting with creative coding projects. I am constantly seeking new ways to merge my technical skills with my creative pursuits. It's a continuous journey of learning and self-expression."), /*#__PURE__*/React.createElement("p", null, "Don't know what I'm doing most of the time. Sometimes I just go with the flow and see where my curiosity takes me. I'm just trying to fill out the emptiness within myself."), /*#__PURE__*/React.createElement("div", {
     className: "fact-list"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Location"), /*#__PURE__*/React.createElement("span", null, "Zürich / Stans, CH")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Camera"), /*#__PURE__*/React.createElement("span", null, "35mm + digital")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Currently"), /*#__PURE__*/React.createElement("span", null, "Apprentice IT"))))));
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Location"), /*#__PURE__*/React.createElement("span", null, "Zürich / Stans, CH")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Camera"), /*#__PURE__*/React.createElement("span", null, "FUJIFILM X-E2, CONTAX 139")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Occupation"), /*#__PURE__*/React.createElement("span", null, "ApprenticeInformation Technologist"))))));
 }
 
 // ===== GALLERY =====

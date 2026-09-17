@@ -236,7 +236,7 @@ const bioWallWords = [
 const playlist = [
   {
     title: "The most beautiful bitter fruit",
-    file: "Music/la-dispute-wildlife_202605/La Dispute - Wildlife - 07 The Most Beautiful Bitter Fruit.mp3"
+    file: "Music/la-dispute-wildlife_202605/La Dispute - Wildlife - 07 The Most Beautiful Bitter Fruit.mp3",
   },
   {
     title: "To Withstand the Force of Storms",
@@ -250,7 +250,7 @@ const playlist = [
     title: "Woman (in mirror)",
     file: "Music/la-dispute-rooms-of-the-house_202605/La Dispute - Rooms of the House - 03 Woman (in mirror).mp3",
   },
-  
+
   {
     title: "HUDSONVILLE, MI 1956",
     file: "Music/la-dispute-rooms-of-the-house_202605/La Dispute - Rooms of the House - 01 HUDSONVILLE, MI 1956.mp3",
@@ -517,7 +517,7 @@ function Home({ navigate }) {
     <>
       <section className="home-hero page-pad">
         <div className="hero-copy">
-          <Eyebrow>Information technologist / photographer</Eyebrow>
+          <Eyebrow>Information technologist / Pathfinder</Eyebrow>
           <h1>
             Romeo
             <br />
@@ -527,7 +527,7 @@ function Home({ navigate }) {
           </h1>
           <p className="hero-intro">
             Based between Zürich and Stans, Switzerland. Information
-            Technologist, Photographer, and Music Enjoyer.
+            Technologist and Music Enjoyer.
           </p>
           <div className="hero-links">
             <ArrowLink onClick={() => navigate("gallery")}>
@@ -635,17 +635,24 @@ function Bio() {
         <img src="Images/R0001722.JPEG" alt="Romeo Arisona" />
         <div className="reading-column">
           <p className="lead">
-            I am an Information Technologist and photographer based between
-            Zürich and Stans, Switzerland.
+            I am an Information Technologist and Freelancer based between Zürich
+            and Stans, Switzerland.
           </p>
           <p>
-            At Pilatus Aircraft, I work with the IED team on the infrastructure
-            and applications that keep a very large machine moving. Outside of
-            work, I document the world in digital and analogue frames.
+            Apprentice Information Technologist at Pilatus Aircraft as part of
+            the IED team. Building and maintaining IT infrastructure at one of
+            Switzerland's premier aerospace manufacturers. //Actually doing
+            nothing
+            <br />
+            Outside of work I'm quite crafty with my hands, often engaging in DIY projects and photography.
+            I also enjoy exploring new technologies and experimenting with creative coding projects.
+            I am constantly seeking new ways to merge my technical skills with my creative pursuits.
+            It's a continuous journey of learning and self-expression.
           </p>
           <p>
-            My interests tend to orbit around systems, identity, music, and the
-            particular atmosphere of places after dark.
+            Don't know what I'm doing most of the time.
+            Sometimes I just go with the flow and see where my curiosity takes me.
+            I'm just trying to fill out the emptiness within myself.
           </p>
           <div className="fact-list">
             <div>
@@ -654,11 +661,11 @@ function Bio() {
             </div>
             <div>
               <b>Camera</b>
-              <span>35mm + digital</span>
+              <span>FUJIFILM X-E2, CONTAX 139</span>
             </div>
             <div>
-              <b>Currently</b>
-              <span>Apprentice IT</span>
+              <b>Occupation</b>
+              <span>ApprenticeInformation Technologist</span>
             </div>
           </div>
         </div>
