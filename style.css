@@ -40,6 +40,11 @@ body:before {
   background-image: radial-gradient(#fff 0.45px, transparent 0.55px);
   background-size: 4px 4px;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: crosshair;
+}
 .app {
   min-height: 100vh;
   position: relative;
@@ -70,12 +75,9 @@ body:before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    url("Images/Cloud1.png"),
-    url("Images/Cloud2.png"),
-    url("Images/cloud3.png"),
-    url("Images/Cloud1.png"),
-    url("Images/Cloud2.png"),
-    url("Images/cloud3.png");
+    url("Images/Cloud1.png"), url("Images/Cloud2.png"),
+    url("Images/cloud3.png"), url("Images/Cloud1.png"),
+    url("Images/Cloud2.png"), url("Images/cloud3.png");
   background-position:
     4vw 9vh,
     calc(100% - 2vw) 58vh,
@@ -202,6 +204,29 @@ body:before {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+}
+.music-bar {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  color: var(--red);
+  z-index: 10;
+}
+.music-bar button {
+  border: none;
+  background: transparent;
+  color: var(--red);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.music-bar button:hover {
+  opacity: 0.7;
 }
 .page-pad {
   padding-left: 8vw;
@@ -925,12 +950,18 @@ footer {
     font-size: 9px;
   }
   footer {
-    padding: 18px 6vw;
-    gap: 12px;
-    line-height: 1.4;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 20px 6vw;
+    font-size: 10px;
+  }
+  footer span {
+    width: 100%;
   }
   footer span:last-child {
-    white-space: nowrap;
+    white-space: normal;
   }
 }
 

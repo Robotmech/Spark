@@ -33,28 +33,29 @@ const photos = [
 
 const marqueeItems = [
   "Better in the Dark",
-  "Photography",
-  "Pilatus Aircraft",
-  "IT & Systems",
-  "Film Photography",
-  "Flight Simulation",
   "Radiohead",
   "Nine Inch Nails",
+  "La Dispute",
+  "My Chemical Romance",
+  "Alice in Chains",
+  "Car Seat Headrest",
+  "Eliott Smith",
   "DCS",
   "TV Girl",
   "Slowdive",
   "Title Fight",
   "My Bloody Valentine",
   "Have A Nice Life",
-  "My Chemical Romance",
-  "La Dispute",
-  "Car Seat Headrest",
   "The Strokes",
   "Kino",
   "Jeff Buckley",
   "Julie",
   "Deftones",
-  "Arctic Monkeys",
+  "Photography",
+  "Pilatus Aircraft",
+  "IT & Systems",
+  "Film Photography",
+  "Flight Simulation",
   "Made with Spite",
 ];
 
@@ -232,6 +233,76 @@ const bioWallWords = [
   "Failure",
 ];
 
+const playlist = [
+  {
+    title: "The most beautiful bitter fruit",
+    file: "Music/la-dispute-wildlife_202605/La Dispute - Wildlife - 07 The Most Beautiful Bitter Fruit.mp3"
+  },
+  {
+    title: "To Withstand the Force of Storms",
+    file: "Music/la-dispute-vancouver/La Dispute - Vancouver - 04 To Withstand the Force of Storms.mp3",
+  },
+  {
+    title: "Woman (reading)",
+    file: "Music/la-dispute-rooms-of-the-house_202605/La Dispute - Rooms of the House - 09 Woman (reading).mp3",
+  },
+  {
+    title: "Woman (in mirror)",
+    file: "Music/la-dispute-rooms-of-the-house_202605/La Dispute - Rooms of the House - 03 Woman (in mirror).mp3",
+  },
+  
+  {
+    title: "HUDSONVILLE, MI 1956",
+    file: "Music/la-dispute-rooms-of-the-house_202605/La Dispute - Rooms of the House - 01 HUDSONVILLE, MI 1956.mp3",
+  },
+];
+
+function MusicPlayer() {
+  const [current, setCurrent] = React.useState(0);
+  const [playing, setPlaying] = React.useState(false);
+  const audioRef = React.useRef(null);
+  React.useEffect(() => {
+    audioRef.current = new Audio(playlist[current].file);
+    audioRef.current.loop = false;
+    audioRef.current.onended = () => {
+      nextSong();
+    };
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [current]);
+  const playPause = () => {
+    if (playing) {
+      audioRef.current.pause();
+      setPlaying(false);
+    } else {
+      audioRef.current.play();
+      setPlaying(true);
+    }
+  };
+  const nextSong = () => {
+    setCurrent((current + 1) % playlist.length);
+    setPlaying(false);
+  };
+  const prevSong = () => {
+    setCurrent((current - 1 + playlist.length) % playlist.length);
+    setPlaying(false);
+  };
+  React.useEffect(() => {
+    if (playing && audioRef.current) {
+      audioRef.current.play().catch(() => {});
+    }
+  }, [current]);
+  return (
+    <div className="music-bar">
+      <span>{playlist[current].title}</span> 
+      <button onClick={prevSong}>⏮</button>
+      <button onClick={playPause}>{playing ? "⏸" : "▶"}</button>
+      <button onClick={nextSong}>⏭</button>
+    </div>
+  );
+}
+
 function App() {
   const [page, setPage] = useState(window.location.hash.slice(1) || "home");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -262,7 +333,9 @@ function App() {
 
   const toggleTheme = () => {
     const nextMode = dark ? "light" : "dark";
-    console.log(`[ MODE ] switching to ${nextMode} :: ${nextMode === "dark" ? "night" : "day"} mode`);
+    console.log(
+      `[ MODE ] switching to ${nextMode} :: ${nextMode === "dark" ? "night" : "day"} mode`,
+    );
     setDark(!dark);
   };
 
@@ -314,7 +387,7 @@ function App() {
           </button>
         </div>
       </header>
-
+      <MusicPlayer />
       <main>
         {page === "home" && <Home navigate={navigate} />}
         {page === "bio" && <Bio />}
@@ -324,6 +397,21 @@ function App() {
       </main>
       <footer>
         <span>Romeo Arisona / Better in the Dark</span>
+        <span>
+          <a href="https://github.com/Robotmech" target="_blank">
+            Github
+          </a>
+        </span>
+        <span>
+          <a href="https://www.linkedin.com/in/romeo-arisona" target="_blank">
+            LinkedIn
+          </a>
+        </span>
+        <span>
+          <a href="https://www.instagram.com/rrarisona" target="_blank">
+            Instagram
+          </a>
+        </span>
         <span>CH · 2026</span>
       </footer>
     </div>
@@ -348,11 +436,7 @@ function RainbowBackground() {
           rainbowPatterns[(frame + index) % rainbowPatterns.length];
         const color = rainbowColors[(index * 2) % rainbowColors.length];
         return (
-          <div
-            className="rainbow-line"
-            style={{ color }}
-            key={index}
-          >
+          <div className="rainbow-line" style={{ color }} key={index}>
             {pattern.repeat(7)}
           </div>
         );
@@ -437,7 +521,9 @@ function Home({ navigate }) {
           <h1>
             Romeo
             <br />
-            <i>Arisona.</i>
+            <i>
+              Ari<a href="Images/Romeo AriSONa.png">son</a>a.
+            </i>
           </h1>
           <p className="hero-intro">
             Based between Zürich and Stans, Switzerland. Information
@@ -488,7 +574,9 @@ function Home({ navigate }) {
       </div>
       <section className="intro-band page-pad">
         <div>
-          <Eyebrow>Who is this?</Eyebrow>
+          <Eyebrow>
+            <a href="Images/WhoIsThis.webp">Who is this?</a>
+          </Eyebrow>
           <h2>
             Information Technologist.
             <br />
@@ -504,7 +592,8 @@ function Home({ navigate }) {
             updating outdated stuff. //Actually doing nothing
             <br />
             <br />
-            The rest of the time: out with friends, being stressed, commuting on trains, and listening to music.
+            The rest of the time: out with friends, being stressed, commuting on
+            trains, and listening to music.
           </p>
           <ArrowLink onClick={() => navigate("bio")}>More about me</ArrowLink>
         </div>
@@ -513,9 +602,7 @@ function Home({ navigate }) {
         <div className="section-heading">
           <div>
             <Eyebrow>Gallery / Selected Frames</Eyebrow>
-            <h2>
-              Don't know what I'm doing
-            </h2>
+            <h2>Don't know what I'm doing</h2>
           </div>
           <ArrowLink onClick={() => navigate("gallery")}>
             All photographs
